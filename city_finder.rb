@@ -4,8 +4,8 @@
 
 #1. Create hash with city names and postcodes
 #2. Get user input 
-#3. Display names to user which are available (Using a method)
-#4. Display available area codes to user (Using a method)
+#3. Display names to user which are available (Fetch from hash)
+#4. Display relevant area codes to user (if/else statements)
 #5. Create a loop to continue running the program
 
 #Hash
