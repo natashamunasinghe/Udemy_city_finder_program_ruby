@@ -23,12 +23,14 @@ destination = {
 #   @cities = destination.select{ |k,v| k == "sydney" }
 # end
 
-#if/else statement
+#if/else statement and loops
+
 puts "Do you want to look for up a postcode? (Y/N)"
 response = gets.chomp.capitalize
 
 if response == "Y"
-  puts "hello"
+  puts "Your choices are #{destination.keys}"
+  sleep(1.0)
 
 elsif response == "N"
   puts "See you next time!"
@@ -36,37 +38,37 @@ elsif response == "N"
 else
   puts "Invalid response"
 
-end
+puts "Which city postcode from the list above are you looking for?"
+city_choice = gets.chomp.capitalize
+
+  if city_choice == "Sydney"
+    puts "The postcode for Sydney is #{destination.fetch("Sydney")}"
+   
+  elsif city_choice == "Melbourne"
+    puts "The postcode for Sydney is #{destination.fetch("Melbourne")}"
+
+  elsif city_choice == "Brisbane"
+    puts "The postcode for Brisbane is #{destination.fetch("Brisbane")}"
+  
+  elsif city_choice == "Adelaide"
+    puts "The postcode for Adelaide is #{destination.fetch("Adelaide")}"
+
+  elsif city_choice == "Perth"
+    puts "The postcode for Perth is #{destination.fetch("Perth")}"
+
+  elsif city_choice == "Darwin"
+    puts "The postcode for Darwin is #{destination.fetch("Darwin")}"
+
+  elsif city_choice == "Hobart"
+    puts "The postcode for Hobart is #{destination.fetch("Hobart")}"
+
+  else
+    puts "Invalid response"
+  
+  end
+end 
 
 
 
-
-puts "Which city postcode are you looking for?"
-response = gets.chomp
-
-destination.each { |k, v| puts "Your city choices are #{k}" }
-# hash.each { |k, v| puts "The key is #{k} and the value is #{v}" }
-
-# puts "Here are your city choices #{city_info}"
-
-
-# destination.each do |x, v|
-#     puts "The available city locations are #{x}"
-# end
-
-# p destination.map {|x| x.values_at}.uniq
-
-
-
-#
-
-# #method to display names
-# def get_names
-#   destination.
-# end
-
-
-
-#
 
 
